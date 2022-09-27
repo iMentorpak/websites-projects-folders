@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/e2f8f4228e.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oxygen&family=Poppins:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav {
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 6.5rem;
+            background: transparent;
+            transition: all 0.5s ease;
+            z-index: 100000;
+
+        }
+
+        .nav .menu-bar .menu-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav .menu-bar .menu-items li {
+            margin: 0 10px;
+        }
+
+        .nav .menu-bar .menu-items li a {
+            font-size: 18px;
+            font-weight: 600;
+            color: #121212;
+        }
+
+        .nav .menu-bar .menu-items li a:hover {
+            color: rgb(69, 105, 194);
+        }
+
+        .nav .navbar-toggler {
+            display: none;
+            outline: none;
+            border: none;
+        }
+
+        .nav .navbar-toggler .toggler-icon {
+            width: 27px;
+            height: 3px;
+            margin: 8px 0;
+            background-color: black;
+            display: block;
+            position: relative;
+            transition: all 0.3s ease-out;
+        }
+
+        .nav .navbar-social {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav .navbar-social span {
+            font-size: 16px;
+            color: #6c6c6c;
+            font-weight: 600;
+            padding-right: 10px;
+        }
+
+        .nav .navbar-social ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav .navbar-social ul li {
+            margin: 0 10px;
+            font-size: 18px;
+            color: #6c6c6c;
+        }
+
+        .nav .navbar-social ul li a {
+            color: #6c6c6c;
+        }
+
+        /* ********** Home ********** */
+
+        h3 {
+            font-size: 44px;
+            font-weight: 500;
+            color: #121212;
+            line-height: 55px;
+        }
+
+        h6 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: 17px;
+            line-height: 32px;
+            color: #121212;
+
+        }
+
+        .back {
+            background-image: url(6.jpg);
+            width: 100%;
+            height: 120vh;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .back .overlay {
+            background: linear-gradient(0deg, rgba(106, 129, 161, 0.6727065826330532) 0%, rgba(242, 242, 242, 0.9304096638655462) 81%);
+            width: 100%;
+            height: 100%;
+        }
+
+        .back .hero-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .back .hero-shape img {
+            width: 100%;
+            display: block;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .hero-text .header-btn {
+            margin-top: 22px;
+        }
+
+        .main-btn {
+            display: inline-block;
+            font-weight: 700;
+            align-items: center;
+            white-space: nowrap;
+            vertical-align: center;
+            border: 2px solid transparent;
+            border-radius: 50px;
+            padding: 0 32px;
+            font-size: 16px;
+            line-height: 50px;
+            color: #0067f4;
+            position: relative;
+            transition: all 0.4s ease-out 0%;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .hero-text .header-btn li {
+            display: inline;
+            margin: 10px 10px 0 0;
+        }
+
+        .hero-text .header-btn li a.main-btn {
+            border-radius: 50px;
+            overflow: hidden;
+            background-color: #fff;
+            border: 0;
+            line-height: 50px;
+
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+        }
+
+        .hero-text .header-btn li a.main-btn i {
+            margin-left: 5px;
+            color: #1c539f;
+        }
+
+        .hero-text .header-btn .btn-one {
+            color: #fff;
+        }
+
+        .hero-text .header-btn .btn-one::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(76, 79, 231, 1) 0%, rgba(82, 100, 199, 1) 0%, rgba(190, 34, 160, 1) 100%);
+            z-index: -1;
+            transition: all 0.3s ease;
+            background-position: right center;
+
+        }
+
+        .hero-text .header-btn .btn-one:hover::before {
+            background: linear-gradient(to left, rgba(76, 79, 231, 1) 0%, rgba(82, 100, 199, 1) 0%, rgba(190, 34, 160, 1) 100%);
+            background-position: left center;
+
+        }
+
+        /* ****** service ****** */
+        .service h6{
+            margin-bottom: 7rem;
+        }
+            .wrapper{
+              margin: 5rem 7rem 10rem 7rem;
+            }
+            .service{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        .service .service-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        }
+        .service .service-content .box{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .service .service-content .box .box-one{
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="">
+            <img src="logo.png" alt="" class="logo">
+        </a>
+        <div class="navbar-toggler  " type="button" id="bar">
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+        </div>
+
+        <div class="menu-bar">
+            <div class="menu-items">
+
+                <li><a href="">Home</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Servicng</a></li>
+                <li><a href="">Contact us</a></li>
+
+            </div>
+        </div>
+        <div class="navbar-social">
+            <span>FOLLOW US</span>
+            <ul>
+                <li><a href=""><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!-- ********** Home ********** -->
+    <div class="back">
+        <div class="overlay"></div>
+        <div class="hero-shape">
+            <img src="header-shape.svg" alt="">
+        </div>
+    </div>
+    <div class="hero-text">
+        <h3>We Are A Strategic Marketing,<br> Media And Ideas Agency</h3>
+        <h6>Here We Are Building And Designing Landing Page, Befor you Lounch your Product And We Will Design And Deploy
+            The Website</h6>
+        <ul class="header-btn">
+            <li><a href="" class="main-btn btn-one">Get In Touch</a></li>
+            <li><a href="" class="main-btn btn-Two">Watch Videos <i class="fa fa-play"></i></a></li>
+
+        </ul>
+    </div>
+
+    <!-- ********** Service ********** -->
+    <section class="wrapper">
+        <section id="service" class="service">
+            <h3>Crafted For</h3>
+            <h6>Here We Are Building And Designing Landing Page, Befor you Lounch your Produch</h6>
+            <div class="service-content">
+                <div class="box">
+                    <div class="box-one">
+                        <div class="services">
+                            <div class="service-icon">
+                                <i class="fa fa-bell"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4 class="service-title">SaaS Buisness</h4>
+                                <p class="text">Here We Are Building And Designing <br> Landing Page, Befor you Lounch
+
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="services">
+                            <div class="service-icon">
+                                <i class="fa fa-bell"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4 class="service-title">SaaS Buisness</h4>
+                                <p class="text">Here We Are Building And Designing <br> Landing Page, Befor you Lounch
+
+
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="box-one">
+                        <div class="services">
+                            <div class="service-icon">
+                                <i class="fa fa-bell"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4 class="service-title">SaaS Buisness</h4>
+                                <p class="text">Here We Are Building And Designing <br> Landing Page, Befor you Lounch
+
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="services">
+                            <div class="service-icon">
+                                <i class="fa fa-bell"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4 class="service-title">SaaS Buisness</h4>
+                                <p class="text">Here We Are Building And Designing <br> Landing Page, Befor you Lounch
+
+
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="service-img">
+                    <img src="1.png" alt="">
+                </div>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+</html>
