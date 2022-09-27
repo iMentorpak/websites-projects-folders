@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+ 
+    font-family: 'Montserrat', sans-serif;
+}
+.logo{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 60px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   color: white;
+} 
+
+.navbar{
+    transition: all 0.7s ease-out;
+
+display: flex;
+align-items: center;
+justify-content: center;
+position: sticky;
+top: 0;
+cursor: pointer;
+}
+.navList{
+width: 50%;
+display: flex;
+/* justify-content: center; */
+align-items: center;
+}
+.navList li{
+padding: 24px 25px;
+}
+.navList li a{
+font-size: 15px;
+color: white; 
+font-weight: 400;
+font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+.rightnav{
+    width: 40%;
+    text-align: right;
+    line-height: 60px;
+    color: white;
+    padding: 0 23px;
+}
+#search{
+    
+    font-size: 17px;
+    border-radius: 5px;
+    color: white;
+    
+}
+.background{
+    background: rgba(0,0, 0,0.7) url(travel1.jpg.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.img1{
+    width: 120px;
+    height: 130px;
+}
+.firstsection{
+    height: 100vh;
+}
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Tahoma;
+    max-width: 50%;
+    margin: auto;
+    height: 60%;
+    font-size: 13px;
+    
+}
+.firsthalf{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.secondhalf{
+    width: 30%;
+}
+.secondhalf .img1{
+    width: 70%;
+    padding: 4px 0;
+    border: 4px solid white;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+}
+.text-big{
+font-size: 25px;
+text-align: center;
+justify-content: center;
+}
+.text-small{
+    font-size: 17px;
+}
+.btn{
+    padding: 5px 15px;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    margin: 5px 3px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.btn-sm{
+    padding: 1px 5px;
+    border: 2px solid white;
+    background: none;
+    border-radius: 5px;
+    color: white;
+    vertical-align: middle;
+
+}
+
+.img2{
+    width: 200px;
+    height: 200px;
+    margin: 15px ;
+    border-radius: 15px;
+    border: 5px solid black;
+    float: right;
+}
+.sectionright{
+    display: flex;
+ 
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 70%;
+    padding-top: 20px;
+    margin: auto;
+    flex-direction: row-reverse;
+ 
+}
+.sectionleft{
+    display: flex;
+ padding: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 70%;
+    padding-top: 20px;
+    margin: auto;
+    
+    
+}
+.sectiontag{
+    padding: 15px 0;
+}
+.paras{
+    
+}
+.contact{
+    background-color:#f6f5f4;
+    max-width:1000px ;
+    margin: auto;
+    padding-top: 50px;
+    height: 50vh;
+}
+.text-center{
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.form{
+    max-width: 50%;
+    margin: 25px auto;
+ 
+}
+.form input{
+    margin: 15px 0;
+       font-family: sans-serif;
+width: 100%;    
+padding: 19px 5px;
+font-size: 14px;
+border: 2px solid grey;
+border-radius: 5px;
+padding: 5px 6px;
+}
+.btn-dark{
+    color: black;
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 5px;
+    
+}
+.text-footer{
+display: flex;
+justify-content: center;
+text-align: center;
+padding-top: 350px;
+font-size: 15px;
+
+
+font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.burger{
+position: absolute;
+cursor: pointer;
+right: 5%;
+top: 15px;
+display: none;
+}
+.line{
+    width: 30px;
+    background-color: #f6f5f4;
+    height: 4px;
+    margin: 3px 3px;
+}
+@media only screen and (max-width:1100px) {
+    .navList{
+        flex-direction: column;
+    }
+    .navbar{
+        flex-direction: column;
+        height: 500px;
+    }
+    .rightnav{
+        text-align: center;
+    }
+    #search{
+        width: 100%;
+    }
+    .burger{
+        display: block;
+    }
+    .h-nav-resp{
+        height: 72px;
+    }
+    .v-class-resp{
+        opacity: 0;
+    }
+.box-main{
+    flex-direction: column-reverse;
+    max-width: 100%;
+}
+.sectionright{
+    flex-direction: column-reverse;
+}
+.sectionleft{
+    flex-direction: column-reverse;
+}
+}
+.text-small{
+    text-align: center;
+}
+.text-big{
+    text-align: center;
+}
+.buttons{
+    text-align: center;
+}
+.btn{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+nav{
+    display: flex;
+line-height: 40px;
+ 
+}
+.navbar{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+  
+   
+}
+.navlist{
+    display:flex ;
+    padding: 20px;
+     
+   
+}
+@media (max-width:1200px) {
+    nav{
+        flex-direction: column;
+
+    }
+   .navbar{
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    font-size: 10px;
+   }  
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e2f8f4228e.js" crossorigin="anonymous"></script>
+    <title>REsponsive Navbar</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-decoration: none;
+            color: black;
+                   
+        }
+        header{
+            display: inline-block;
+            width: 100%;
+            position: relative;
+           
+        }
+        .logo{
+            float: left;
+            font-size: 30px;
+            line-height: 80px;
+            padding-left: 10px;
+        }
+        nav{
+            float: right;
+        }
+         li{
+            padding: 10px 10px;       
+            display: inline-block;
+            padding-right: 40px;
+            line-height: 80px;
+        }
+        a{
+            display: inline-block;
+        }
+
+    .btn{
+        float: right;
+        position: absolute;
+        right: 80px;
+        top: 30px;
+        font-size: 30px;
+        display: none;
+    }
+    .toggle-btn i{
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        float: left;
+        margin-bottom: 10px;
+    }
+    @media (max-width:900px) {
+        .toggle-btn{
+            display: block;
+        }
+        nav{
+            display: none;
+        }
+        nav.show{
+            display: block;
+        }
+    }
+        
+    </style>
+</head>
+<body>
+<header>
+    <div class="toogle-btn" onclick="m();">
+        <i  class="fa-solid fa-bars"></i>
+</div>
+    <label class="logo">WebSite</label>
+        <nav id="nav">
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Search</a></li>
+        <li><a href="#">Feedback</a></li>
+    </ul>
+
+    
+
+</nav>
+</header>
+<script type="text/javascript">
+
+
+function myfunction(){
+var navbar = document.getElementById('nav');
+navbar.classList.btn('show');
+
+
+
+
+}
+</script>
+
+</body>
+</html>

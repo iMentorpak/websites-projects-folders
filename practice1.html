@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-decoration: none;
+      font-family: sans-serif;
+    }
+    .logo{
+ padding-right: 50px;
+line-height: 50px;
+
+    }
+    .logoleft{
+
+      font-size: 25px;
+    }
+    .logoright{
+      font-size: 20px;
+    }
+    .navbar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0; 
+      line-height: 60px;
+      cursor: pointer;
+     
+      
+       
+    }
+    .navlist{
+      width: 80%;
+      display: flex;
+  
+      align-content: center;
+    }
+    .navlist li{
+      padding: 0 29px;
+        
+    }
+    .navlist li {
+      font-size: 15px;
+    }
+    @media  (max-width:1200px) {
+      
+      
+      .navbar{
+        
+        flex-direction: column;
+        margin: auto;
+        
+       
+      }
+      .navlist{
+       
+        text-align: center;
+        margin: auto;
+        flex-direction: column;
+        
+      }
+      .navlist li{
+        text-align: center;
+        
+       
+      }
+    }
+
+    </style>
+</head>
+<body>
+  <nav class="navbar ">
+    <ul class="navlist">
+      <div class="logo"><span class="logoleft">Code</span><span class="logoright">Smashers</span> </div>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Projects</li>
+      <li>Feedback</li>
+      <li>FAQs</li>
+
+    </ul>
+  </nav>
+  
+</body>
+</html>
